@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Jogadores de Valorant</title>
+</head>
+<body>
+<h1>Lista de Jogadores de Valorant</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Nome</th>
+        <th>Agente</th>
+        <th>Nível</th>
+        <th>Frags</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="jogador : ${jogadores}">
+        <td th:text="${jogador.nome}"></td>
+        <td th:text="${jogador.agente}"></td>
+        <td th:text="${jogador.nivel}"></td>
+        <td th:text="${jogador.frags}"></td>
+    </tr>
+    </tbody>
+</table>
+<hr>
+</body>
+</html>
